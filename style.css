@@ -1,0 +1,91 @@
+body {
+    background-image: url("http://cdn.wallpapersafari.com/20/11/yK6Xsu.jpg");
+   	background-color: #cccccc;
+   	padding: 15%;
+}
+
+#container {
+	height: 600px;
+	width: 900px;
+	background: red;
+}
+
+.background {
+	background: transparent;
+}
+
+.height {
+	height: 227.8px;
+}
+
+.health-one, .health-two, .health-three, .health-four {
+	color: white;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+.ophealth-one, .ophealth-two, .ophealth-three, .ophealth-four {
+	color: white;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+.heroHealthBar,  .oppHealthBar {
+	color: blue;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+#paddingFlash {
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+#paddingWW {
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+
+.center {
+	color: red;
+	font-size: 100px;
+	text-align: center;
+}
+
+#newGame {
+	background: transparent;
+	color: blue;
+	font-size: 100px;
+	text-align: center;
+	margin-left: 25%;
+	margin-top: 50px;
+}
+
+#choose-text {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+
+
+.actions {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+
+.image-two {
+	margin-top: 30px;
+}
+
+#attack-button, #next-opponent {
+	text-align: center;
+	margin-left: 40%;
+	font-size: 40px;
+	
+	width: 200px;
+}
+
