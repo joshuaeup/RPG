@@ -20,14 +20,14 @@ body {
 	height: 227.8px;
 }
 
-.health-one, .health-two, .health-three, .health-four {
+.health-one, .health-two, .health-three, .health-four, .power-one, .power-two, .power-three, .power-four {
 	color: white;
 	font-size: 30px;
 	text-align: center;
 
 }
 
-.ophealth-one, .ophealth-two, .ophealth-three, .ophealth-four {
+.ophealth-one, .ophealth-two, .ophealth-three, .ophealth-four, .oppower-one, .oppower-two, .oppower-three, .oppower-four {
 	color: white;
 	font-size: 30px;
 	text-align: center;

@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var opponentArr = [];
 	
 
-	//$("body").css("background-image","url(http://www.comicbookglobal.com/wp-content/uploads/2016/02/Justice-League-Movie-2017.jpg)");
+	
 	
 
 	$(".image-two").hide();
@@ -89,10 +89,15 @@ $(document).ready(function() {
 
 		
 	});
-	$(".health-one").append(" " + supermanObj.health + " " + supermanObj.hp);
-	$(".health-two").append(" " + batmanObj.health + " " + batmanObj.hp);
-	$(".health-three").append(" " + wonderWomanObj.health + " " + wonderWomanObj.hp);
-	$(".health-four").append(" " + flashObj.health + " " + flashObj.hp);
+	$(".power-one").append(" " + supermanObj.hp);
+	$(".power-two").append(" " + batmanObj.hp);
+	$(".power-three").append(" " + wonderWomanObj.hp);
+	$(".power-four").append(" " + flashObj.hp);
+
+	$(".health-one").append(" " + supermanObj.health);
+	$(".health-two").append(" " + batmanObj.health);
+	$(".health-three").append(" " + wonderWomanObj.health);
+	$(".health-four").append(" " + flashObj.health);
 
 	function chosenHero() {
 		heroHp = 10;
@@ -184,11 +189,15 @@ $(document).ready(function() {
 
 		
 	});
+	$(".oppower-one").append(" " + supermanObj.hp);
+	$(".oppower-two").append(" " + batmanObj.hp);
+	$(".oppower-three").append(" " + wonderWomanObj.hp);
+	$(".oppower-four").append(" " + flashObj.hp);
 
-	$(".ophealth-one").append(" " + supermanObj.health + " " + supermanObj.hp);
-	$(".ophealth-two").append(" " + batmanObj.health + " " + batmanObj.hp);
-	$(".ophealth-three").append(" " + wonderWomanObj.health + " " + wonderWomanObj.hp);
-	$(".ophealth-four").append(" " + flashObj.health + " " + flashObj.hp);
+	$(".ophealth-one").append(" " + supermanObj.health);
+	$(".ophealth-two").append(" " + batmanObj.health);
+	$(".ophealth-three").append(" " + wonderWomanObj.health);
+	$(".ophealth-four").append(" " + flashObj.health);
 
 	function chosenOpp() {
 			if (chosenOpponent == "superman") {
@@ -317,8 +326,7 @@ $(document).ready(function() {
 			$(".center").html("Congradulations");
 			$("#newGame").hide();
 
-			// $(".center").attr("style", "color:blue");
-			// $(".center").html("Congradulations!!! You have defeated every boss.");
+		
 					}
 
 
@@ -329,8 +337,11 @@ $(document).ready(function() {
 				$("#img-holder-two").show();
 				
 				$("#attack-button").on("click", function() {
+
+				
 				$(".heroHealthBar").html(heroHealth);
 				$(".oppHealthBar").html(oppHealth);
+
 				$("#firstDisplay").show();
 				$("#secondDisplay").show();
 				$(".actions").show();
