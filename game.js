@@ -20,7 +20,7 @@ $(document).ready(function() {
 	var supermanObj = {
 		hp : 25,
 	
-		health : 202
+		health : 120
 	};
 
 	$("#superman").on("click", function(){
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 	var batmanObj = {
 		hp : 20,
-		health : 120
+		health : 202
 	};
 
 
@@ -286,8 +286,26 @@ $(document).ready(function() {
 				 location.reload();
 			});
 			
-			$(".center").attr("style", "color:blue");
-			$(".center").html("Congradulations!!! You have defeated every boss.");
+			
+
+			setTimeout(function(){
+				$("body").css("background-image","url(http://cdn2-www.gamerevolution.com/assets/uploads/2015/10/file_11861_batmanarkhamknight4.jpg)");
+				$("#newGame").show();
+
+			    $(".center").html("Welcome to the Justice League");
+			}, 3000);
+			
+			$("body").css("background-image","url(https://static.giantbomb.com/uploads/original/0/30/2762035-bak_sshot130.jpg)");
+			$(".center").attr("style", "color:red");
+			
+			$("#newGame").attr("style", "color:blue");
+			$("#newGame").attr("style", "color:yellow");
+
+			$(".center").html("Congradulations");
+			$("#newGame").hide();
+
+			// $(".center").attr("style", "color:blue");
+			// $(".center").html("Congradulations!!! You have defeated every boss.");
 					}
 
 
@@ -303,6 +321,7 @@ $(document).ready(function() {
 				$("#firstDisplay").show();
 				$("#secondDisplay").show();
 				$(".actions").show();
+
 				$("#firstDisplay").html("<h3>You've attacked " + chosenOpponent + " and did " + heroHp + " damage.</h3>");
 				$("#secondDisplay").html("<h3>You've been hit by " + chosenOpponent + " and recieved " + oppHp + " damage</h3>");
 
@@ -320,7 +339,7 @@ $(document).ready(function() {
 						newOpponent();
 						
 
-					} else if (opponentArr.length == 23) {
+					} else if (opponentArr.length >= 23) {
 						completion();
 					}
 					
