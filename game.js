@@ -6,6 +6,7 @@ $(document).ready(function() {
 	var oppHp;
 	var oppHealth;
 	var opponentArr = [];
+	
 
 	//$("body").css("background-image","url(http://www.comicbookglobal.com/wp-content/uploads/2016/02/Justice-League-Movie-2017.jpg)");
 	
@@ -19,11 +20,20 @@ $(document).ready(function() {
 	$(".actions").hide();
 
 
+	function randomHigh() {
+		var addRandom = Math.floor(Math.random() * 9) + 1;
+		return addRandom * 10;
+	}
+
+	function randomLow() {
+		var addRandom = Math.floor(Math.random() * 3) + 1;
+		return addRandom * 10;
+	}
 
 	var supermanObj = {
-		hp : 25,
+		hp : randomHigh(),
 	
-		health : 120
+		health : 490
 	};
 
 	$("#superman").on("click", function(){
@@ -37,8 +47,8 @@ $(document).ready(function() {
 	});
 
 	var batmanObj = {
-		hp : 20,
-		health : 202
+		hp : randomLow(),
+		health : 500
 	};
 
 
@@ -52,8 +62,8 @@ $(document).ready(function() {
 	});
 
 	var wonderWomanObj = {
-		hp : 25,
-		health : 120
+		hp : randomHigh(),
+		health : 350
 	};
 
 
@@ -66,8 +76,8 @@ $(document).ready(function() {
 	});
 
 	var flashObj = {
-		hp : 25,
-		health : 100
+		hp : randomLow(),
+		health : 400
 	};
 
 
@@ -79,13 +89,13 @@ $(document).ready(function() {
 
 		
 	});
-	$(".health-one").append(" " + supermanObj.health);
-	$(".health-two").append(" " + batmanObj.health);
-	$(".health-three").append(" " + wonderWomanObj.health);
-	$(".health-four").append(" " + flashObj.health);
+	$(".health-one").append(" " + supermanObj.health + " " + supermanObj.hp);
+	$(".health-two").append(" " + batmanObj.health + " " + batmanObj.hp);
+	$(".health-three").append(" " + wonderWomanObj.health + " " + wonderWomanObj.hp);
+	$(".health-four").append(" " + flashObj.health + " " + flashObj.hp);
 
 	function chosenHero() {
-		heroHp = 8;
+		heroHp = 10;
 		if (chosenCharacter == "superman") {
 			heroHealth = supermanObj.health;
 
@@ -157,7 +167,7 @@ $(document).ready(function() {
 	$("#wonder-woman-op").on("click", function(){
 		chosenOpponent = "wonder-woman";
 	
-		var hp = 25; 
+		var hp = 30; 
 		var health = 120;
 	
 		chosenOpp();
@@ -175,10 +185,10 @@ $(document).ready(function() {
 		
 	});
 
-	$(".ophealth-one").append(" " + supermanObj.health);
-	$(".ophealth-two").append(" " + batmanObj.health);
-	$(".ophealth-three").append(" " + wonderWomanObj.health);
-	$(".ophealth-four").append(" " + flashObj.health);
+	$(".ophealth-one").append(" " + supermanObj.health + " " + supermanObj.hp);
+	$(".ophealth-two").append(" " + batmanObj.health + " " + batmanObj.hp);
+	$(".ophealth-three").append(" " + wonderWomanObj.health + " " + wonderWomanObj.hp);
+	$(".ophealth-four").append(" " + flashObj.health + " " + flashObj.hp);
 
 	function chosenOpp() {
 			if (chosenOpponent == "superman") {
@@ -328,26 +338,28 @@ $(document).ready(function() {
 				$("#firstDisplay").html("<h3>You've attacked " + chosenOpponent + " and did " + heroHp + " damage.</h3>");
 				$("#secondDisplay").html("<h3>You've been hit by " + chosenOpponent + " and recieved " + oppHp + " damage</h3>");
 
-					
+					oppHp = randomHigh();
 					oppHealth = oppHealth - heroHp;
 					heroHealth = heroHealth - oppHp;
-					heroHp += 9;
+					heroHp += 27;
 
 					
 					
 					if(heroHealth <= 0) {
-						gameOver()
+						gameOver();
 
-					} else if(oppHealth <= 0) {
+					} 
+
+					else if(oppHealth <= 0) {
 						newOpponent();
 						
 
-					} else if (opponentArr.length >= 23) {
+					 } 
+					else if (opponentArr.length >= 23) {
 						completion();
 					}
 					
 					
-				});
-				
+				});	
 			}	
 });
