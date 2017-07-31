@@ -7,6 +7,9 @@ $(document).ready(function() {
 	var oppHealth;
 	var opponentArr = [];
 
+	//$("body").css("background-image","url(http://www.comicbookglobal.com/wp-content/uploads/2016/02/Justice-League-Movie-2017.jpg)");
+	
+
 	$(".image-two").hide();
 	$(".arena").hide();
 	$("#attack-button").hide();
@@ -297,7 +300,7 @@ $(document).ready(function() {
 			
 			$("body").css("background-image","url(https://static.giantbomb.com/uploads/original/0/30/2762035-bak_sshot130.jpg)");
 			$(".center").attr("style", "color:red");
-			
+
 			$("#newGame").attr("style", "color:blue");
 			$("#newGame").attr("style", "color:yellow");
 
